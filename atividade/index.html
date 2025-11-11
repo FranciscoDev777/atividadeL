@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Visuais com HTML/CSS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Barra de navegação fixa -->
+    <!-- Menu com submenus -->
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="#">Elementos de Navegação</a>
+                <ul class="submenu">
+                    <li><a href="#accordion">Accordion</a></li>
+                    <li><a href="#tabs">Abas</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Elementos de Exibição dinâmica</a>
+                <ul class="submenu">
+                    <li><a href="#lightbox">Lightbox</a></li>
+                    <li><a href="#flip-card">FlipCards</a></li>
+                    <li><a href="#carousel">Carrossel</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Elementos de Animação e Efeitos</a>
+                <ul class="submenu">
+                    <li><a href="#parallax">Parallax Scrolling</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Elementos de Interação</a>
+                <ul class="submenu">
+                    <li><a href="#modals">Modals/Popups</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Elementos de UI</a>
+                <ul class="submenu">
+                    <li><a href="#cards">Cards</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Elementos Visuais Interativos com HTML/CSS</h1>
+        <p>Explore cada seção para ver diferentes componentes visuais implementados com HTML e CSS.</p>
+    </header>
+
+    <!-- Seção Carrossel -->
+    <section id="carousel">
+        <h2>Carrossel</h2>
+        <!-- Implemente o carrossel aqui -->
+    </section>
+
+
+    <!-- Seção Acorddion -->
+        <section id="accordion">
+            <h2>Accordion</h2>
+            <!-- Implemente o accordion aqui -->
+            <section id="acordion1">
+                <div class="basico">
+                    <details class="basic-accordion">
+                        <summary>Elemento acordeon basico</summary>
+                        <p>texto qualquer</p>
+                    </details>
+            </section>
+    
+            <section id="acordion2">
+                <div class="basico">
+                    <details class="accordion-basic">
+                        <summary>SENAI</summary>
+                        <p>Eu estudo no Senai</p>
+                    </details>
+            </section>
+    
+            <h1 class="titulo">Accordion Moderno (HTML + CSS)</h1>
+    
+            <section class="accordion-container">
+    
+                <details class="accordion-item">
+                    <summary>O que é HTML?</summary>
+                    <p>HTML é a linguagem usada para estruturar o conteúdo das páginas da web, como textos, imagens e links.
+                    </p>
+                </details>
+    
+                <details class="accordion-item">
+                    <summary>O que é CSS?</summary>
+                    <p>CSS é a linguagem que define a aparência visual do HTML, controlando cores, fontes e layouts.</p>
+                </details>
+    
+                <details class="accordion-item">
+                    <summary>O que é JavaScript?</summary>
+                    <p>JavaScript é uma linguagem de programação usada para adicionar interatividade e comportamento
+                        dinâmico às páginas da web.</p>
+                </details>
+    
+            </section>
+        </section>
+        <!-- Seção Tabs -->
+        <section id="tabs">
+            <h2>Tabs (Abas)</h2>
+            <!-- Implemente a Aba aqui -->
+
+            <div class="senai3-tabs">
+
+                <input type="radio" name="senai3-tabs" id="senai3-tabone" checked>
+                <input type="radio" name="senai3-tabs" id="senai3-tabtwo">
+                <input type="radio" name="senai3-tabs" id="senai3-tabthree">
+                <input type="radio" name="senai3-tabs" id="senai3-tabfour">
+                <input type="radio" name="senai3-tabs" id="senai3-tabfive">
+
+                <div class="tab-buttons">
+                    <label for="senai3-tabone">Coragem</label>
+                    <label for="senai3-tabtwo">Vingança</label>
+                    <label for="senai3-tabthree">Honra</label>
+                    <label for="senai3-tabfour">Vida</label>
+                    <label for="senai3-tabfive">Força</label>
+                </div>
+
+                <div class="senai3-tab" id="tab1">
+                    <h1>Aba 1 - A Coragem</h1>
+                    <p>Não fuja da batalha; a vida se revela apenas aos que ousam enfrentar o impossível.</p>
+                </div>
+
+                <div class="senai3-tab" id="tab2">
+                    <h1>Aba 2 - A Vingança</h1>
+                    <p>A raiva queima, mas só o perdão constrói um caminho que vale a pena seguir.</p>
+                </div>
+
+                <div class="senai3-tab" id="tab3">
+                    <h1>Aba 3 - A Honra</h1>
+                    <p>A verdadeira força não está na espada, mas na justiça que você escolhe defender.</p>
+                </div>
+
+                <div class="senai3-tab" id="tab4">
+                    <h1>Aba 4 - A Vida</h1>
+                    <p>Cada dia é um passo; caminhe com propósito, mesmo que o mundo pareça cruel e sem sentido.</p>
+                </div>
+
+                <div class="senai3-tab" id="tab5">
+                    <h1>Aba 5 - Força</h1>
+                    <p>A verdadeira força não está em derrotar o inimigo, mas em não deixar que a raiva controle seus
+                        passos; quem domina a si mesmo domina o mundo.</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- Seção Parallax -->
+        <section id="parallax">
+            <h2>Efeito Parallax</h2>
+            <!-- Implemente o parallax aqui -->
+             <!-- Parallax 1 -->
+<div class="parallax parallax1">
+    <div class="parallax-texto">
+      <h2>Natureza e Calma</h2>
+      <p>Um momento de paz entre o vento e o céu.</p>
+    </div>
+  </div>
+  
+  <!-- Parallax 2 -->
+  <div class="parallax parallax2">
+    <div class="parallax-texto">
+      <h2>Cidade e Movimento</h2>
+      <p>O ritmo moderno entre luzes e sonhos.</p>
+    </div>
+  </div>
+
+  <section id="parallax3">
+    <h2> Efeito Parallax </h2>
+    <section id="parallax3">
+        <div class="parallax3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToI95RFDDutg2HTAPngKUsNjGzC9tuScAJeQ&s" alt="the back random person">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIt1QkUq-lzmaAioWRx5QHNnY6l0KfrMPCg&s" alt="an ea">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEInOJ_SSOu5CW4IVLZgw5-QUygqc_6Z4AQA&s">
+        </div>        
+    </section>
+</section>
+
+        <!-- Seção Cards -->
+        <section id="cards">
+            <h2>Cards</h2>
+            <!-- Implemente o cards aqui -->
+        </section>
+
+        <!-- Seção Modals -->
+        <section id="modals">
+            <h2>Modals/Pop-Ups</h2>
+            <!-- Implemente o Modals aqui -->
+        </section>
+
+        <!-- Seção Galeria com Lightbox -->
+        <section id="lightbox">
+            <h2>Galeria de Imagens com Lightbox</h2>
+            <!-- Implemente a galeria aqui -->
+        </section>
+
+
+        <!-- Seção Timeline -->
+        <section id="timeline">
+            <h2>Timeline</h2>
+            <!-- Implemente a timeline aqui -->
+             <section id="timeline1">
+      <div class="timeline">
+        <!-- Implemente a timeline aqui -->
+        <div class="timelinebasica">
+          <div class="container left">
+            <div class="content">
+              <h2>2025</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis? Asperiores minus tenetur
+                beatae sapiente nisi, vitae repellendus laudantium natus. Iure ab animi eius deleniti tenetur totam</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>2026</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis? Asperiores minus tenetur
+                beatae sapiente nisi, vitae repellendus laudantium natus. Iure ab animi eius deleniti tenetur totam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        </section>
+
+        <section id="timeline">
+            <h2>Timeline Horizontal</h2>
+          
+            <div class="timeline-horizontal">
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>2023</h3>
+                  <p>Início da jornada. Primeiros projetos e ideias começam a tomar forma.</p>
+                </div>
+              </div>
+          
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>2024</h3>
+                  <p>Expansão de conhecimentos e crescimento pessoal e profissional.</p>
+                </div>
+              </div>
+          
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>2025</h3>
+                  <p>Novas metas e desafios alcançados com sucesso e dedicação.</p>
+                </div>
+              </div>
+          
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>2026</h3>
+                  <p>Planejamento para o futuro e inovação constante.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="linha-do-tempo">
+            <h2 class="titulo-timeline">Linha do Tempo de Conquistas</h2>
+          
+            <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="content">
+                <h3>2023</h3>
+                <p>Início da jornada. Primeiros projetos e ideias começam a tomar forma.</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="content">
+                <h3>2024</h3>
+                <p>Expansão de conhecimentos e crescimento pessoal e profissional.</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="content">
+                <h3>2025</h3>
+                <p>Novas metas e desafios alcançados com sucesso e dedicação.</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="content">
+                <h3>2026</h3>
+                <p>Planejamento para o futuro e inovação constante.</p>
+              </div>
+            </div>
+          </section>
+          
+          
+
+
+
+        <!-- Seção Flip Cards -->
+        <section id="flip-card">
+            <h2>Flip Cards</h2>
+            <!-- Implemente a timeline aqui -->
+        </section>
+
+        <footer>
+            <p>© 2025 - Elementos Visuais com HTML e CSS</p>
+            <p>Professora Andreza Quintas</p>
+        </footer>
+
+</body>
+
+</html>
