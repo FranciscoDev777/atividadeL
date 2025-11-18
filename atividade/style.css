@@ -649,166 +649,145 @@ header {
     to { opacity: 1; transform: translateY(0); }
   }
 /* Estilo da seção */
-#timeline {
-    text-align: center;
-    padding: 50px 20px;
-    background: #f3f3f3;
-  }
+/* CONTAINER */
+.timeline-vertical {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  padding-left: 40px;
+}
+
+/* TÍTULO */
+.timeline-vertical .titulo-timeline {
+  text-align: center;
+  color: #5b16b6;
+  margin-bottom: 40px;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* LINHA VERTICAL */
+.timeline-vertical::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #5b16b6;
+  border-radius: 2px;
+}
+
+/* CADA ITEM */
+.timeline-vertical .t-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.timeline-vertical .t-item:last-child {
+  margin-bottom: 0;
+}
+
+/* CÍRCULO */
+.timeline-vertical .t-circle {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 4px solid #5b16b6;
+  border-radius: 50%;
+}
+
+/* CAIXA DE TEXTO */
+.timeline-vertical .t-content {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-vertical .t-content h3 {
+  color: #5b16b6;
+  margin-bottom: 8px;
+}
+
+.timeline-vertical .t-content p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
   
-  /* Linha principal */
-  .timeline-horizontal {
-    position: relative;
+/* ==========================================================
+   TIMELINE HORIZONTAL (bolinhas acima do texto)
+   ========================================================== */
+
+   .timeline-horizontal {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 50px auto;
-    width: 90%;
-    max-width: 1000px;
-  }
-  
-  .timeline-horizontal::before {
+    position: relative;
+    margin: 40px auto;
+    padding: 40px 0;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Linha roxa entre os cards */
+.timeline-horizontal::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 45px; /* ajustado para passar atrás das bolinhas */
     left: 0;
     width: 100%;
-    height: 5px;
-    background: #4a148c;
-    border-radius: 5px;
-    transform: translateY(-50%);
-  }
-  
-  /* Itens da timeline */
-  .timeline-item {
+    height: 4px;
+    background: #4A148C;
+    border-radius: 4px;
+}
+
+/* Cada item */
+.timeline-item {
     position: relative;
-    text-align: center;
     width: 22%;
-  }
-  
-  /* Pontinhos na linha */
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border: 4px solid #4a148c;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  
-  /* Conteúdo */
-  .timeline-content {
-    background: white;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1;
-  }
-  
-  .timeline-content h3 {
-    color: #4a148c;
-    margin-bottom: 10px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .timeline-horizontal {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .timeline-horizontal::before {
-      top: 0;
-      left: 50%;
-      width: 5px;
-      height: 100%;
-      transform: translateX(-50%);
-    }
-  
-    .timeline-item {
-      width: 80%;
-      margin-bottom: 50px;
-    }
-  
-    .timeline-item::before {
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    .timeline-content {
-      margin-top: 20px;
-    }
-  }
-  
-  .linha-do-tempo {
-    position: relative;
-    max-width: 600px;
-    margin: 50px auto;
-    padding-left: 30px;
-  }
-  
-  .titulo-timeline {
     text-align: center;
-    color: #5b16b6;
-    margin-bottom: 40px;
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  
-  .linha-do-tempo::before {
+}
+
+/* Bolinha acima do texto */
+.timeline-item::before {
     content: "";
     position: absolute;
-    left: 15px;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background-color: #5b16b6;
-    border-radius: 2px;
-  }
-  
-  .timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 40px;
-  }
-  
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-  
-  .circle {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: 4px solid #5b16b6;
+    top: -10px; /* sobe a bolinha */
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 4px solid #4A148C;
     border-radius: 50%;
-  }
-  
-  .content {
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .content h3 {
-    color: #5b16b6;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Card */
+.timeline-content {
+    background: white;
+    padding: 25px 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+.timeline-content h3 {
+    margin-top: 10px; /* espaço após a bolinha */
+    color: #4A148C;
+    font-size: 1.2rem;
     margin-bottom: 8px;
-  }
-  
-  .content p {
+}
+
+/* Texto */
+.timeline-content p {
     margin: 0;
     color: #333;
-    line-height: 1.5;
-  }
-  
+    line-height: 1.4;
+}
